@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.top-cont{
+    width: 80%;
+    margin: 30px auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+button {
+    width: 50px;
+    margin-top: 10px;
+    box-shadow: 3px 3px black;
+    text-transform: capitalize;
+}
+hr{
+    width: 80%;
+    margin: 0 auto;
+}
+.display{
+    width: 80%;
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.display h3{
+    margin: 30px 0 0 0;
+}
+.display li{
+    margin:15px 0 0 30px;
+}

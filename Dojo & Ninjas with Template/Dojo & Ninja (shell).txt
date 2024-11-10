@@ -1,0 +1,32 @@
+#import app1.models
+
+>>>> from app1.models import *
+>>>>Dojo.objects.create(name='Axsos ramallah',city='ramllah',state='West Bank')
+>>>>Dojo.objects.create(name='Axsos Germany',city='Germany',state='Germany')
+>>>>Dojo.objects.create(name='Axsos greece',city='Athens',state='Athens')
+
+>>>>Dojo.objects.all().delete()
+
+>>>>Dojo.objects.create(name='Axsos ramallah',city='ramllah',state='West Bank')
+    Dojo.objects.create(name='Axsos Germany',city='Germany',state='Germany')
+    Dojo.objects.create(name='Axsos greece',city='Athens',state='Athens')
+
+>>>>this_dojo=Dojo.objects.get(id=5)
+Ninja.objects.create(first_name='jalal',last_name='hemmo',dojo=this_dojo)
+Ninja.objects.create(first_name='jalal',last_name='hemmo',dojo=this_dojo)
+Ninja.objects.create(first_name='jalal',last_name='hemmo',dojo=this_dojo)
+
+>>>>this_dojo=Dojo.objects.get(id=6)
+Ninja.objects.create(first_name='jalal',last_name='hemmo',dojo=this_dojo)
+Ninja.objects.create(first_name='jalal',last_name='hemmo',dojo=this_dojo)
+Ninja.objects.create(first_name='jalal',last_name='hemmo',dojo=this_dojo)
+
+
+>>>>this_dojo=Dojo.objects.get(id=7)
+Ninja.objects.create(first_name='jalal',last_name='hemmo',dojo=this_dojo)
+Ninja.objects.create(first_name='jalal',last_name='hemmo',dojo=this_dojo)
+Ninja.objects.create(first_name='jalal',last_name='hemmo',dojo=this_dojo)
+
+>>>>Ninja.objects.filter(dojo=Dojo.objects.first())
+>>>>Ninja.objects.filter(dojo=Dojo.objects.last())
+
