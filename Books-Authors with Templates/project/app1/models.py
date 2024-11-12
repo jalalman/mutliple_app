@@ -54,7 +54,7 @@ def add_book_to_author(data):
 
 def add_author_to_Book(data):
     this_book=Book.objects.get(id=int(data['book_id']))
-    print(this_book)
+    
     this_author=Author.objects.get(id=int(data['author_id']))
-    print(this_author)
+    
     this_author.books.add(this_book)
