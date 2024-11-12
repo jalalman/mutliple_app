@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contrainer">
+        <h1>Welcome to greate Number Game!</h1>
+        {{user}}
+        {{rand}}
+        <h3>I am thinking of a number between 1 and 100</h3>
+        {% if result %}
+            <h1>{{result|safe}}</h1>
+            <h1> {{guess}} guess</h1>
+        {% endif %}
+        <form action="{{url_for('reset')}}" method="get">
+            <button type="submit" class="hide {% if won %} show1 {% endif %}">Play again!</button>
+        </form>
+        <form action="{{url_for('landing')}}" method="post" class="{% if won %} hide {% endif %} ">
+            <input type="text" name="guessed">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
