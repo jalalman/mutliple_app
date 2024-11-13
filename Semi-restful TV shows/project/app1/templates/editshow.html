@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <title>edit Show</title>
+</head>
+<body class="container">
+    <h1>edit Show {{show.id}}</h1>
+    <form action="/confirmedit" method="post" >
+        {% csrf_token %}
+        <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="title" value="{{show.title}}" class="form-control">
+        <label for="network" class="form-label">network</label>
+        <input type="text" name="network" value="{{show.network}}" class="form-control">
+        <label for="releaseDate" class="form-label">Release Date</label>
+        <input type="date" name="releasedate" value="{{show.releaseDate}}" class="form-control">
+        <input type="hidden" name="show_id" value="{{show.id}}" class="form-control">
+        <label for="desc" class="form-label">Description</label>
+        <textarea name="desc" value="{{show.desc}}" class="form-control"></textarea>
+        <button type="submit" class="btn btn-success">update</button>
+        </div>
+    </form>
+    <a href="{% url 'show' %}" class="btn btn-warning">Go Back</a>
+</body>
+</html>

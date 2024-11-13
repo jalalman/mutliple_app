@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <title>All shows</title>
+</head>
+<body class="container">
+    <h1>All Shows</h1>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Network</th>
+            <th>release date</th>
+            <th>Actions</th>
+        </tr>
+        {% for show in shows%}
+        <tr>
+            <td>{{show.id}}</td>
+            <td>{{show.title}}</td>
+            <td>{{show.network}}</td>
+            <td>{{show.releaseDate}}</td>
+            <td>
+                <a href="{% url 'displayShow' show.id%}" class="btn btn-primary">view</a>
+                <a href="{% url 'deleteshow' show.id %}" class="btn btn-danger">delete</a>
+                <a href="{% url 'render_editshow' show.id %}" class="btn btn-info">edit</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div>
+        <a href="{% url 'addAnewpage' %}" class="btn btn-success">Add a new Show</a>
+    </div>
+</body>
+</html>
