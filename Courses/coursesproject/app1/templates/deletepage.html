@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>are you sure you want to delete?</h3>
+    <div>
+        <label for="name">Name</label>
+        <p>{{course.name}}</p>
+        <label for="desc">description</label>
+        <p>{{course.desc}}</p>
+    </div>
+    <div>
+        <a href="{% url 'confirmdelete' course.id%}">YES</a>
+        <a href="{% url 'index' %}">No</a>
+    </div>
+</body>
+</html>
