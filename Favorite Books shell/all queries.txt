@@ -1,0 +1,12 @@
+this_book=Book.objects.get(id=book_id)
+user=this_book.uploaded_by
+
+this_user=User.objects.get(id=user_id)
+book=this_user.uploaded_book.all()
+
+
+this_book=Book.objects.get(id=book_id)
+this_user=this_book.users_liked_book.all()
+
+this_user=User.objects.get(id=user_id)
+this_book=this_user.fav_books.all
